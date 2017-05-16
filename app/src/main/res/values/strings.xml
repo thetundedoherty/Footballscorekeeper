@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Score keeper</string>
+
+    <string name="ifeanyi_ubah">Fc Ifeanyi Ubah</string>
+
+    <string name="goal">GOAL</string>
+
+    <string name="zero">0</string>
+
+    <string name="foul">FOUL</string>
+
+    <string name="p_kick">P/KICK</string>
+
+    <string name="offside">OFFSIDE</string>
+
+    <string name="mfm_fc">Mfm Fc</string>
+
+    <string name="reset">RESET</string>
+
+</resources>

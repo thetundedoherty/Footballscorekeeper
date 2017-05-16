@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="horizontal"
+    tools:context="com.example.user.scorekeeper.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#c6daef">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/fc_ifeanyi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/ifeanyi_ubah"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/ubahfc_logo"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_below="@+id/fc_ifeanyi"
+                    android:id="@+id/ubah_fc_logo"
+                    android:layout_centerHorizontal="true"/>
+
+
+
+                <Button
+                    android:id="@+id/goal_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ubah_fc_logo"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:onClick="goalIncrement"
+                    android:text="@string/goal"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/goal_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/zero"
+                    android:textSize="60sp" />
+
+
+                <Button
+                    android:id="@+id/foul_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/score"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:onClick="foulIncrement"
+                    android:text="@string/foul"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/no_of_fouls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/foul_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/zero"
+                    android:textSize="60sp" />
+
+                <Button
+                    android:id="@+id/penalty_kick_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/no_of_fouls"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:onClick="penaltyIncrement"
+                    android:text="@string/p_kick"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/no_of_penalty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/penalty_kick_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/zero"
+                    android:textSize="60sp" />
+
+                <Button
+                    android:id="@+id/offside_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/no_of_penalty"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:onClick="offsideIncrementUbah"
+                    android:text="@string/offside"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/no_of_offside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/offside_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/zero"
+                    android:textSize="60sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="90dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:id="@+id/mfm_fc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/mfm_fc"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/mfm_logo"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_below="@+id/mfm_fc"
+                    android:id="@+id/mfm_logo"
+                    android:layout_centerHorizontal="true" />
+
+
+                <Button
+                    android:id="@+id/goal_button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mfm_logo"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:onClick="goalIncrementMfm"
+                    android:text="@string/goal"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/score2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/goal_button2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/zero"
+                    android:textSize="60sp" />
+
+
+                <Button
+                    android:id="@+id/foul_button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/score2"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:onClick="foulIncrementMfm"
+                    android:text="@string/foul"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/no_of_fouls2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/foul_button2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/zero"
+                    android:textSize="60sp" />
+
+                <Button
+                    android:id="@+id/penalty_kick_button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:onClick="penaltyIncrementMfm"
+                    android:text="@string/p_kick"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/no_of_fouls2"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"/>
+
+
+                <TextView
+                    android:id="@+id/no_of_penalty2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/penalty_kick_button2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/zero"
+                    android:textSize="60sp" />
+
+                <Button
+                    android:id="@+id/offside_button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:onClick="offsideIncrementMfm"
+                    android:text="@string/offside"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/no_of_penalty2"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp" />
+
+
+                <TextView
+                    android:id="@+id/no_of_offside2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/offside_button2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/zero"
+                    android:textSize="60sp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:fontFamily="monospace"
+            android:onClick="resetToZero"
+            android:text="@string/reset"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
